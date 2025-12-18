@@ -16,27 +16,6 @@ if (progressBar){
   });
 }
 
-/* Theme toggle (saved) */
-const themeToggle = $("#themeToggle");
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "light") document.body.classList.add("light");
-
-function updateThemeIcon(){
-  if (!themeToggle) return;
-  const isLight = document.body.classList.contains("light");
-  const icon = themeToggle.querySelector(".icon");
-  if (icon) icon.textContent = isLight ? "☀" : "☾";
-}
-updateThemeIcon();
-
-if (themeToggle){
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light");
-    localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark");
-    updateThemeIcon();
-  });
-}
-
 /* Mobile drawer */
 const menuBtn = $("#menuBtn");
 const drawer = $("#drawer");
@@ -65,11 +44,13 @@ $$(".nav__link").forEach(a => {
 });
 
 /* Reveal on scroll */
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("show"); });
-}, { threshold: 0.12 });
-
-$$(".reveal").forEach(el => revealObs.observe(el));
+const revealEls = $$(".reveal");
+if (revealEls.length){
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("show"); });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+}
 
 /* Projects search */
 const searchInput = $("#projectSearch");
@@ -87,24 +68,24 @@ if (searchInput && projectsList){
 }
 
 /* Lightbox (Awards page uses .lightbox buttons) */
-const lightbox = $("#lightbox");
+const lightboxWrap = $("#lightbox");
 const lightboxImg = $("#lightboxImg");
 const lightboxCap = $("#lightboxCap");
 const lightboxClose = $("#lightboxClose");
 const lightboxBackdrop = $("#lightboxBackdrop");
 
 function openLightbox(src, cap){
-  if (!lightbox || !lightboxImg) return;
-  lightbox.classList.add("open");
-  lightbox.setAttribute("aria-hidden", "false");
+  if (!lightboxWrap || !lightboxImg) return;
+  lightboxWrap.classList.add("open");
+  lightboxWrap.setAttribute("aria-hidden", "false");
   lightboxImg.src = src;
   lightboxImg.alt = cap || "image";
   if (lightboxCap) lightboxCap.textContent = cap || "";
 }
 function closeLightbox(){
-  if (!lightbox) return;
-  lightbox.classList.remove("open");
-  lightbox.setAttribute("aria-hidden", "true");
+  if (!lightboxWrap) return;
+  lightboxWrap.classList.remove("open");
+  lightboxWrap.setAttribute("aria-hidden", "true");
   if (lightboxImg) lightboxImg.src = "";
 }
 
