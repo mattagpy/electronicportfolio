@@ -6,11 +6,16 @@
   <title>Portfolio | Awards & Certifications</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-page="awards">
-  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
 
+<body data-page="awards">
+  <div class="progress" aria-hidden="true">
+    <div class="progress__bar" id="progressBar"></div>
+  </div>
+
+  <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
+
       <div class="brand">
         <div class="brand__logo">MA</div>
         <div class="brand__text">
@@ -20,78 +25,165 @@
       </div>
 
       <nav class="nav" aria-label="Primary">
-        <a class="nav__link" data-link="home" href="index.html">Home</a>
-        <a class="nav__link" data-link="about" href="about.html">About</a>
-        <a class="nav__link" data-link="resume" href="resume.html">Resume</a>
-        <a class="nav__link" data-link="projects" href="projects.html">Projects</a>
-        <a class="nav__link" data-link="extras" href="extracurriculars.html">Extracurriculars</a>
-        <a class="nav__link" data-link="awards" href="awards.html">Awards & Certifications</a>
-        <a class="nav__link" data-link="contact" href="contact.html">Contact</a>
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="resume.html">Resume</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="extracurriculars.html">Extracurriculars</a>
+        <a class="nav__link" href="awards.html">Awards & Certifications</a>
+        <a class="nav__link" href="contact.html">Contact</a>
       </nav>
 
-      <div class="header__actions">
-        <button class="icon-btn icon-btn--menu" id="menuBtn" aria-label="Open menu">Menu</button>
-      </div>
     </div>
   </header>
 
-  <div class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
-      <div class="drawer__top">
-        <span class="drawer__title">Menu</span>
-        <button class="icon-btn" id="closeDrawer" aria-label="Close">✕</button>
-      </div>
-      <div class="drawer__links">
-        <a class="drawer__link" href="index.html">Home</a>
-        <a class="drawer__link" href="about.html">About</a>
-        <a class="drawer__link" href="resume.html">Resume</a>
-        <a class="drawer__link" href="projects.html">Projects</a>
-        <a class="drawer__link" href="extracurriculars.html">Extracurriculars</a>
-        <a class="drawer__link" href="awards.html">Awards & Certifications</a>
-        <a class="drawer__link" href="contact.html">Contact</a>
-      </div>
-    </div>
-    <div class="drawer__backdrop" id="drawerBackdrop"></div>
-  </div>
-
+  <!-- MAIN -->
   <main class="container">
+
     <section class="section reveal">
       <h1 class="section__title">Awards & Certifications</h1>
-      <p class="small">Click an item to view it bigger.</p>
     </section>
 
-    <section class="section">
-      <div class="grid grid--2">
-        <div class="card reveal">
-          <h2 class="card__title">Certification / Award #1</h2>
-          <p class="small">Short description: what it is, when you got it, why it matters.</p>
-          <button class="btn lightbox" data-img="images/award1.jpg" data-caption="Certification / Award #1">View</button>
+    <!-- SECTION 1: HPH -->
+    <section class="section reveal">
+      <div class="card">
+        <h2 class="card__title">Hawaiʻi Pacific Health Careers Internship</h2>
+
+        <p class="small">
+          <b>Summary:</b> Completed a career internship experience with Hawaiʻi Pacific Health where I observed workplace professionalism,
+          learned how teams communicate in a real healthcare environment, and practiced responsibility, organization, and strong communication skills.
+        </p>
+
+        <div class="media-grid media-grid--4" style="margin-top:12px;">
+          <div class="ph ph--thumb">
+            <img src="images/hph1.jpg" alt="HPH Internship proof photo 1"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/hph1.jpg</b></div>
+          </div>
+
+          <div class="ph ph--thumb">
+            <img src="images/hph2.jpg" alt="HPH Internship proof photo 2"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/hph2.jpg</b></div>
+          </div>
+
+          <div class="ph ph--thumb">
+            <img src="images/hph3.jpg" alt="HPH Internship proof photo 3"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/hph3.jpg</b></div>
+          </div>
+
+          <div class="ph ph--thumb">
+            <img src="images/hph4.jpg" alt="HPH Internship proof photo 4"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/hph4.jpg</b></div>
+          </div>
         </div>
 
-        <div class="card reveal">
-          <h2 class="card__title">Certification / Award #2</h2>
-          <p class="small">Short description: what it is, when you got it, why it matters.</p>
-          <button class="btn lightbox" data-img="images/award2.jpg" data-caption="Certification / Award #2">View</button>
+        <div class="tags" style="margin-top:12px;">
+          <span class="tag">Professionalism</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Responsibility</span>
+          <span class="tag">Workplace Experience</span>
         </div>
       </div>
     </section>
+
+    <!-- SECTION 2: CareerSafe -->
+    <section class="section reveal">
+      <div class="card">
+        <h2 class="card__title">CareerSafe Certifications</h2>
+
+        <p class="small">
+          <b>Summary:</b> Earned multiple CareerSafe certifications focused on workplace readiness and safety. These trainings helped me understand
+          proper workplace behavior, safety expectations, and how to follow rules that protect people on the job.
+        </p>
+
+        <div class="media-grid media-grid--6" style="margin-top:12px;">
+          <div class="ph ph--thumb">
+            <img src="images/careersafe1.jpg" alt="CareerSafe certificate 1"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/careersafe1.jpg</b></div>
+          </div>
+
+          <div class="ph ph--thumb">
+            <img src="images/careersafe2.jpg" alt="CareerSafe certificate 2"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/careersafe2.jpg</b></div>
+          </div>
+
+          <div class="ph ph--thumb">
+            <img src="images/careersafe3.jpg" alt="CareerSafe certificate 3"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/careersafe3.jpg</b></div>
+          </div>
+
+          <div class="ph ph--thumb">
+            <img src="images/careersafe4.jpg" alt="CareerSafe certificate 4"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/careersafe4.jpg</b></div>
+          </div>
+
+          <div class="ph ph--thumb">
+            <img src="images/careersafe5.jpg" alt="CareerSafe certificate 5"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/careersafe5.jpg</b></div>
+          </div>
+
+          <div class="ph ph--thumb">
+            <img src="images/careersafe6.jpg" alt="CareerSafe certificate 6"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/careersafe6.jpg</b></div>
+          </div>
+        </div>
+
+        <div class="tags" style="margin-top:12px;">
+          <span class="tag">Workplace Safety</span>
+          <span class="tag">Training</span>
+          <span class="tag">Readiness</span>
+          <span class="tag">Responsibility</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Class Experiences -->
+    <section class="section reveal">
+      <div class="card">
+        <h2 class="card__title">Class Experiences</h2>
+
+        <p class="small">
+          <b>Summary:</b> Evidence of hands-on classwork, projects, and learning experiences that helped build my skills in technology,
+          communication, and problem-solving.
+        </p>
+
+        <div class="media-grid media-grid--2" style="margin-top:12px;">
+          <div class="ph ph--thumb">
+            <img src="images/class1.jpg" alt="Class experience photo 1"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/class1.jpg</b></div>
+          </div>
+
+          <div class="ph ph--thumb">
+            <img src="images/class2.jpg" alt="Class experience photo 2"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/class2.jpg</b></div>
+          </div>
+        </div>
+
+        <div class="tags" style="margin-top:12px;">
+          <span class="tag">Hands-On</span>
+          <span class="tag">Growth</span>
+          <span class="tag">Learning</span>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Lightbox Modal -->
-  <div class="lightbox-wrap" id="lightbox" aria-hidden="true">
-    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
-    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
-      <div class="lightbox__top">
-        <div style="font-weight:800;">Preview</div>
-        <button class="icon-btn" id="lightboxClose" aria-label="Close">✕</button>
-      </div>
-      <img class="lightbox__img" id="lightboxImg" src="" alt="preview" />
-      <div class="lightbox__cap" id="lightboxCap"></div>
-    </div>
-  </div>
-
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__inner">© <span id="year"></span> Your Name</div>
+    <div class="container footer__inner">
+      © <span id="year"></span> Your Name
+    </div>
   </footer>
 
   <script src="script.js"></script>
