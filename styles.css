@@ -202,3 +202,24 @@ a:hover{ text-decoration:underline; }
   margin: 0 auto;
 }
 
+/* Awards page image grids */
+.media-grid{
+  display:grid;
+  gap:12px;
+}
+
+.media-grid--2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.media-grid--4{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.media-grid--6{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+@media (max-width: 720px){
+  .media-grid--6{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px){
+  .media-grid--2,
+  .media-grid--4,
+  .media-grid--6{ grid-template-columns: 1fr; }
+}
+
+
