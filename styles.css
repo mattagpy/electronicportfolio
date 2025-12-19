@@ -303,13 +303,19 @@ a:hover{ color:#57534E; text-decoration:underline; }
 .ph--thumb{ height:180px; }
 
 .ph--resume{
-  height:auto;
-  max-height:900px;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  border: none;            /* optional */
+  background: transparent; /* optional */
 }
 
 .ph--resume img{
-  object-fit:contain;
-  background:#fff;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: unset;
+  background: #fff;
 }
 
 
