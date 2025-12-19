@@ -195,3 +195,10 @@ a:hover{ text-decoration:underline; }
   border-radius: 10px;
   display: block;
 }
+
+.project--center {
+  grid-column: 1 / -1;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
