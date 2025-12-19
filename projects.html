@@ -6,11 +6,16 @@
   <title>Portfolio | Projects</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-page="projects">
-  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
 
+<body data-page="projects">
+  <div class="progress" aria-hidden="true">
+    <div class="progress__bar" id="progressBar"></div>
+  </div>
+
+  <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
+
       <div class="brand">
         <div class="brand__logo">MA</div>
         <div class="brand__text">
@@ -20,55 +25,100 @@
       </div>
 
       <nav class="nav" aria-label="Primary">
-        <a class="nav__link" data-link="home" href="index.html">Home</a>
-        <a class="nav__link" data-link="resume" href="resume.html">Resume</a>
-        <a class="nav__link" data-link="projects" href="projects.html">Projects</a>
-        <a class="nav__link" data-link="extras" href="extracurriculars.html">Extracurriculars</a>
-        <a class="nav__link" data-link="awards" href="awards.html">Awards & Certifications</a>
-        <a class="nav__link" data-link="contact" href="contact.html">Contact</a>
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="resume.html">Resume</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="extracurriculars.html">Extracurriculars</a>
+        <a class="nav__link" href="awards.html">Awards & Certifications</a>
+        <a class="nav__link" href="contact.html">Contact</a>
       </nav>
 
-    
     </div>
   </header>
 
+  <!-- MAIN -->
   <main class="container">
+
     <section class="section reveal">
       <h1 class="section__title">Projects</h1>
     </section>
 
     <section class="section">
       <div class="grid grid--2" id="projectsList">
+
+        <!-- PROJECT 1 -->
         <div class="card project reveal" data-tags="html css javascript portfolio">
           <h2 class="card__title">Portfolio Website</h2>
-          <p class="small"><b>What it is:</b> A multi-page portfolio with mobile menu, search, and an awards lightbox.</p>
+
+          <p class="small">
+            <b>What it is:</b> A multi-page portfolio website showcasing my projects, skills, and achievements.
+          </p>
+
           <div class="ph ph--thumb" style="margin-top:10px;">
-            <img src="images/project1.jpg" alt="Project screenshot" onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <img src="images/project1.jpg" alt="Project screenshot"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
             <div class="ph__empty">Add <b>images/project1.jpg</b></div>
           </div>
+
           <div class="tags">
-            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
           </div>
         </div>
 
-        <div class="card project reveal" data-tags="cyber security troubleshooting networking">
+        <!-- PROJECT 2 -->
+        <div class="card project reveal" data-tags="cyber security networking it">
           <h2 class="card__title">Cyber / IT Activity</h2>
-          <p class="small"><b>What it is:</b> Describe a lab, assignment, or activity (password security, phishing, network basics, etc.).</p>
-          <p class="small"><b>What I learned:</b> Write what improved and what skills you used.</p>
+
+          <p class="small">
+            <b>What it is:</b> A cybersecurity or IT-related activity involving troubleshooting, security concepts, or networking basics.
+          </p>
+
           <div class="ph ph--thumb" style="margin-top:10px;">
-            <img src="images/project2.jpg" alt="Project screenshot" onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <img src="images/project2.jpg" alt="Project screenshot"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
             <div class="ph__empty">Add <b>images/project2.jpg</b></div>
           </div>
+
           <div class="tags">
-            <span class="tag">Cyber</span><span class="tag">Problem-solving</span>
+            <span class="tag">Cybersecurity</span>
+            <span class="tag">IT</span>
+            <span class="tag">Problem Solving</span>
           </div>
         </div>
+
+        <!-- PROJECT 3 (CENTERED) -->
+        <div class="card project reveal project--center" data-tags="placeholder sample">
+          <h2 class="card__title">Sample Project Title</h2>
+
+          <p class="small">
+            <b>What it is:</b> This is placeholder text for a future project. Replace this with real details later.
+          </p>
+
+          <div class="ph ph--thumb" style="margin-top:10px;">
+            <img src="images/project3.jpg" alt="Project screenshot"
+              onerror="this.remove(); this.parentElement.querySelector('.ph__empty').style.display='block';">
+            <div class="ph__empty">Add <b>images/project3.jpg</b></div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__inner">© <span id="year"></span> Your Name</div>
+    <div class="container footer__inner">
+      © <span id="year"></span> Your Name
+    </div>
   </footer>
 
   <script src="script.js"></script>
