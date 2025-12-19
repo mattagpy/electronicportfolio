@@ -69,7 +69,7 @@ a:hover{ text-decoration:underline; }
 .brand__name{ font-weight:700; }
 .brand__tag{ font-size:12px; color:var(--muted); }
 
-.nav{ display:flex; gap:10px; }
+.nav{ display:flex; gap:10px; flex-wrap:wrap; }
 
 .nav__link{
   padding:8px 14px;
@@ -134,11 +134,18 @@ a:hover{ text-decoration:underline; }
   background:var(--card2);
 }
 
-/* ================= IMAGE PLACEHOLDERS ================= */
+/* ================= IMAGE WRAPPERS ================= */
 .ph{
   border-radius:var(--radius);
   background:var(--card2);
   position:relative;
+}
+
+/* Make all images behave nicely by default */
+.ph img{
+  display:block;
+  width:100%;
+  height:auto;
 }
 
 /* profile photo / hero images */
@@ -152,10 +159,9 @@ a:hover{ text-decoration:underline; }
   height:100%;
   object-fit:cover;
   object-position:center 75%;
-  display:block;
 }
 
-/* ================= RESUME (NO CROP, FULL SCROLL) ================= */
+/* ================= RESUME (NO CROP) ================= */
 .ph--resume{
   height:auto;
   overflow:visible;
@@ -182,27 +188,14 @@ a:hover{ text-decoration:underline; }
   color:var(--muted);
 }
 
-/* Project images fit cleanly in card */
-.ph--thumb {
-  height: auto;
-  padding: 10px;
+/* ================= PROJECT THUMBNAILS (GENERAL) ================= */
+.ph--thumb{
+  overflow:hidden;
+  border-radius:12px;
+  background:var(--card2);
 }
 
-.ph--thumb img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 10px;
-  display: block;
-}
-
-.project--center {
-  grid-column: 1 / -1;
-  max-width: 520px;
-  margin: 0 auto;
-}
-
-/* Awards page image grids */
+/* ================= AWARDS PAGE MEDIA GRIDS ================= */
 .media-grid{
   display:grid;
   gap:12px;
@@ -216,51 +209,4 @@ a:hover{ text-decoration:underline; }
   .media-grid--6{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 480px){
-  .media-grid--2,
-  .media-grid--4,
-  .media-grid--6{ grid-template-columns: 1fr; }
-}
-
-/* Make award / gallery images uniform */
-.media-grid .ph--thumb {
-  height: 220px;          /* same height for all */
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.media-grid .ph--thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;      /* crops nicely instead of stretching */
-  display: block;
-}
-
-/* --- Fix HPH image cropping --- */
-.media-grid .ph--thumb{
-  height: 280px;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.media-grid .ph--thumb img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
-  display: block;
-}
-
-/* Fix Class Experiences document images */
-.class-grid .ph--thumb{
-  height: auto;
-  padding: 12px;
-}
-
-.class-grid .ph--thumb img{
-  width: 100%;
-  height: auto;
-  object-fit: contain;   /* show whole document */
-  background: #fff;
-}
-
+@m
