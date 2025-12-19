@@ -6,97 +6,75 @@
   <title>Portfolio | Contact</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-page="contact">
-  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
 
+<body data-page="contact">
+  <div class="progress" aria-hidden="true">
+    <div class="progress__bar" id="progressBar"></div>
+  </div>
+
+  <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
+
       <div class="brand">
-        <div class="brand__logo">MA</div>
+        <div class="brand__logo">JMA</div>
         <div class="brand__text">
-          <div class="brand__name">Your Name</div>
+          <div class="brand__name">John Matthew Agapay</div>
           <div class="brand__tag">Contact</div>
         </div>
       </div>
 
       <nav class="nav" aria-label="Primary">
-        <a class="nav__link" data-link="home" href="index.html">Home</a>
-        <a class="nav__link" data-link="about" href="about.html">About</a>
-        <a class="nav__link" data-link="resume" href="resume.html">Resume</a>
-        <a class="nav__link" data-link="projects" href="projects.html">Projects</a>
-        <a class="nav__link" data-link="extras" href="extracurriculars.html">Extracurriculars</a>
-        <a class="nav__link" data-link="awards" href="awards.html">Awards & Certifications</a>
-        <a class="nav__link" data-link="contact" href="contact.html">Contact</a>
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="resume.html">Resume</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="extracurriculars.html">Extracurriculars</a>
+        <a class="nav__link" href="awards.html">Awards & Certifications</a>
+        <a class="nav__link" href="contact.html">Contact</a>
       </nav>
 
-      <div class="header__actions">
-        <button class="icon-btn icon-btn--menu" id="menuBtn" aria-label="Open menu">Menu</button>
-      </div>
     </div>
   </header>
 
-  <div class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
-      <div class="drawer__top">
-        <span class="drawer__title">Menu</span>
-        <button class="icon-btn" id="closeDrawer" aria-label="Close">✕</button>
-      </div>
-      <div class="drawer__links">
-        <a class="drawer__link" href="index.html">Home</a>
-        <a class="drawer__link" href="about.html">About</a>
-        <a class="drawer__link" href="resume.html">Resume</a>
-        <a class="drawer__link" href="projects.html">Projects</a>
-        <a class="drawer__link" href="extracurriculars.html">Extracurriculars</a>
-        <a class="drawer__link" href="awards.html">Awards & Certifications</a>
-        <a class="drawer__link" href="contact.html">Contact</a>
-      </div>
-    </div>
-    <div class="drawer__backdrop" id="drawerBackdrop"></div>
-  </div>
-
+  <!-- MAIN -->
   <main class="container">
+
     <section class="section reveal">
       <h1 class="section__title">Contact</h1>
-      <p class="small">You can put your email + GitHub here. This form is just for looks unless you connect it to a service.</p>
-    </section>
 
-    <section class="section">
-      <div class="grid grid--2">
-        <div class="card reveal">
-          <h2 class="card__title">Info</h2>
-          <p class="small"><b>Email:</b> youremail@example.com</p>
-          <p class="small"><b>GitHub:</b> github.com/yourusername</p>
-          <p class="small"><b>LinkedIn (optional):</b> linkedin.com/in/yourname</p>
+      <div class="card contact-card">
+
+        <div class="contact-item">
+          <h2>Email</h2>
+          <p>
+            <a href="mailto:matthew.agapay@hotmail.com">
+              matthew.agapay@hotmail.com
+            </a>
+          </p>
         </div>
 
-        <div class="card reveal">
-          <h2 class="card__title">Message (optional)</h2>
-          <div class="form-row">
-            <div>
-              <label>Name</label>
-              <input class="input" placeholder="Your name" />
-            </div>
-            <div>
-              <label>Email</label>
-              <input class="input" placeholder="you@email.com" />
-            </div>
-          </div>
-          <div style="margin-top:12px;">
-            <label>Message</label>
-            <textarea class="input" rows="5" placeholder="Write something..."></textarea>
-          </div>
-          <div style="margin-top:12px;">
-            <button class="btn" type="button">Send (demo)</button>
-            <span class="small" style="display:inline-block;margin-left:10px;">This button doesn’t send without a backend.</span>
-          </div>
+        <div class="contact-item">
+          <h2>GitHub</h2>
+          <p>
+            <a href="https://github.com/mattagpy" target="_blank">
+              github.com/mattagpy
+            </a>
+          </p>
         </div>
+
+        <div class="contact-item">
+          <h2>Phone Number</h2>
+          <p>
+            <a href="tel:18086704279">
+              808-670-4279
+            </a>
+          </p>
+        </div>
+
       </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">© <span id="year"></span> Your Name</div>
-  </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
