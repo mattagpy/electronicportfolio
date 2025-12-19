@@ -6,11 +6,16 @@
   <title>Portfolio | Extracurriculars</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-page="extras">
-  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
 
+<body data-page="extracurriculars">
+  <div class="progress" aria-hidden="true">
+    <div class="progress__bar" id="progressBar"></div>
+  </div>
+
+  <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
+
       <div class="brand">
         <div class="brand__logo">MA</div>
         <div class="brand__text">
@@ -20,66 +25,94 @@
       </div>
 
       <nav class="nav" aria-label="Primary">
-        <a class="nav__link" data-link="home" href="index.html">Home</a>
-        <a class="nav__link" data-link="about" href="about.html">About</a>
-        <a class="nav__link" data-link="resume" href="resume.html">Resume</a>
-        <a class="nav__link" data-link="projects" href="projects.html">Projects</a>
-        <a class="nav__link" data-link="extras" href="extracurriculars.html">Extracurriculars</a>
-        <a class="nav__link" data-link="awards" href="awards.html">Awards & Certifications</a>
-        <a class="nav__link" data-link="contact" href="contact.html">Contact</a>
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="resume.html">Resume</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="extracurriculars.html">Extracurriculars</a>
+        <a class="nav__link" href="awards.html">Awards & Certifications</a>
+        <a class="nav__link" href="contact.html">Contact</a>
       </nav>
 
-      <div class="header__actions">
-        <button class="icon-btn icon-btn--menu" id="menuBtn" aria-label="Open menu">Menu</button>
-      </div>
     </div>
   </header>
 
-  <div class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
-      <div class="drawer__top">
-        <span class="drawer__title">Menu</span>
-        <button class="icon-btn" id="closeDrawer" aria-label="Close">✕</button>
-      </div>
-      <div class="drawer__links">
-        <a class="drawer__link" href="index.html">Home</a>
-        <a class="drawer__link" href="about.html">About</a>
-        <a class="drawer__link" href="resume.html">Resume</a>
-        <a class="drawer__link" href="projects.html">Projects</a>
-        <a class="drawer__link" href="extracurriculars.html">Extracurriculars</a>
-        <a class="drawer__link" href="awards.html">Awards & Certifications</a>
-        <a class="drawer__link" href="contact.html">Contact</a>
-      </div>
-    </div>
-    <div class="drawer__backdrop" id="drawerBackdrop"></div>
-  </div>
-
+  <!-- MAIN -->
   <main class="container">
+
     <section class="section reveal">
-      <h1 class="section__title">Extracurriculars</h1>
-      <p class="small">Add sports, clubs, volunteering, leadership, competitions, church/community events, etc.</p>
+      <h1 class="section__title">Extracurricular Activities</h1>
     </section>
 
     <section class="section">
       <div class="grid grid--2">
+
+        <!-- GYM -->
         <div class="card reveal">
-          <h2 class="card__title">Activity #1</h2>
-          <p class="small"><b>Role:</b> Member / Captain / Volunteer / Officer</p>
-          <p class="small"><b>What I did:</b> 2–4 bullet-style sentences about responsibilities and impact.</p>
-          <div class="tags"><span class="tag">Leadership</span><span class="tag">Teamwork</span></div>
+          <h2 class="card__title">Gym & Fitness</h2>
+
+          <p class="small">
+            <b>What it is:</b> Regular strength training and fitness routines focused on improving discipline, consistency, and overall physical health.
+          </p>
+
+          <div class="ph ph--thumb" style="margin-top:10px;">
+            <div class="ph__empty">Add gym image later</div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Discipline</span>
+            <span class="tag">Consistency</span>
+            <span class="tag">Self-Improvement</span>
+          </div>
         </div>
+
+        <!-- SOCCER -->
         <div class="card reveal">
-          <h2 class="card__title">Activity #2</h2>
-          <p class="small"><b>Role:</b> Member / Volunteer</p>
-          <p class="small"><b>What I learned:</b> Communication, time management, responsibility, etc.</p>
-          <div class="tags"><span class="tag">Communication</span><span class="tag">Discipline</span></div>
+          <h2 class="card__title">Soccer</h2>
+
+          <p class="small">
+            <b>What it is:</b> Participation in competitive soccer, developing teamwork, communication, and leadership skills through regular practices and games.
+          </p>
+
+          <div class="ph ph--thumb" style="margin-top:10px;">
+            <div class="ph__empty">Add soccer image later</div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Teamwork</span>
+            <span class="tag">Leadership</span>
+            <span class="tag">Communication</span>
+          </div>
         </div>
+
+        <!-- TRACK (CENTERED) -->
+        <div class="card reveal project--center">
+          <h2 class="card__title">Track & Field</h2>
+
+          <p class="small">
+            <b>What it is:</b> Involvement in track and field events focused on speed, endurance, and personal performance improvement through consistent training.
+          </p>
+
+          <div class="ph ph--thumb" style="margin-top:10px;">
+            <div class="ph__empty">Add track image later</div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Endurance</span>
+            <span class="tag">Focus</span>
+            <span class="tag">Goal-Oriented</span>
+          </div>
+        </div>
+
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__inner">© <span id="year"></span> Your Name</div>
+    <div class="container footer__inner">
+      © <span id="year"></span> Your Name
+    </div>
   </footer>
 
   <script src="script.js"></script>
