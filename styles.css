@@ -251,3 +251,16 @@ a:hover{ text-decoration:underline; }
   display: block;
 }
 
+/* Fix Class Experiences document images */
+.class-grid .ph--thumb{
+  height: auto;
+  padding: 12px;
+}
+
+.class-grid .ph--thumb img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;   /* show whole document */
+  background: #fff;
+}
+
