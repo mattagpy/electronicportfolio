@@ -181,3 +181,17 @@ a:hover{ text-decoration:underline; }
   font-size:14px;
   color:var(--muted);
 }
+
+/* Project images fit cleanly in card */
+.ph--thumb {
+  height: auto;
+  padding: 10px;
+}
+
+.ph--thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+}
